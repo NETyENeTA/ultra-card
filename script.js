@@ -37,7 +37,6 @@ const MaxLenghts = {
   mounth: 2,
 };
 
-
 window.addEventListener("mousemove", (e) => {
   goMousetoPoint(cursor, e, { x: 4, y: 4 });
 });
@@ -97,20 +96,23 @@ document.getElementsByName("have-question").forEach((element) => {
   });
 });
 
-
 /// footer
-
 
 const footer = document.getElementsByTagName("footer")[0];
 
-footer.addEventListener("click", (e) => {
+function footerBehavior() {
   footer.style.animationName = "vanish";
   footer.style.animationDuration = "3s";
   footer.style.bottom = "-50px";
 
-  footer.children[0].textContent = "Russion Mode is Active!\nThx for choosing meee!"
+  footer.children[0].textContent =
+    "Russion Mode is Active!\nThx for choosing meee!";
 
   for (article of document.getElementsByTagName("article"))
     article.classList.toggle("vanish");
+
   setTimeout(removeSelf, 3500, footer);
-});
+  footer.removeEventListener("click", footerBehavior);
+}
+
+footer.addEventListener("click", footerBehavior);
