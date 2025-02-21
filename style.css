@@ -163,7 +163,7 @@ footer {
   background-color: yellowgreen;
   position: absolute;
   bottom: 50px;
-  right: 60vh;
+  right: 33vw;
   padding: 5px 10px;
 
   animation-duration: 1s;
@@ -172,13 +172,19 @@ footer {
 
 @keyframes show {
   from {
+    background-color: transparent;
+    color: transparent;
     bottom: -50px;
     padding: 0;
   }
   50% {
+    background-color: transparent;
+    color: transparent;
     padding: 1px, 2px;
   }
   to {
+    background-color: yellowgreen;
+    color: black;
     bottom: 50px;
     padding: 5px 10px;
   }
@@ -191,10 +197,14 @@ footer {
   }
 
   50% {
+    background-color: yellowgreen;
+    color: black;
     padding: 0;
     bottom: 50px;
   }
   to {
+    background-color: transparent;
+    color: transparent;
     bottom: -50px;
     padding: 0;
   }

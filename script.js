@@ -108,6 +108,8 @@ footer.addEventListener("click", (e) => {
   footer.style.animationDuration = "3s";
   footer.style.bottom = "-50px";
 
+  footer.children[0].textContent = "Russion Mode is Active!\nThx for choosing meee!"
+
   for (article of document.getElementsByTagName("article"))
     article.classList.toggle("vanish");
   setTimeout(removeSelf, 3500, footer);
