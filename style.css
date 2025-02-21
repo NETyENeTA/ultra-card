@@ -137,15 +137,6 @@ input {
   }
 }
 
-#helper {
-  position: absolute;
-  background-color: wheat;
-  /* padding: 5px 10px; */
-  z-index: 2;
-
-  pointer-events: none;
-}
-
 #cursor {
   position: absolute;
   background-color: #9ab6d1;
@@ -154,6 +145,14 @@ input {
   width: 8px;
   height: 8px;
   border-radius: 8px;
+
+  pointer-events: none;
+}
+
+#helper {
+  position: absolute;
+  background-color: wheat;
+  z-index: 2;
 
   pointer-events: none;
 }
