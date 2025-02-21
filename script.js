@@ -44,6 +44,12 @@ window.addEventListener("mousemove", (e) => {
 
 document.getElementsByName("have-question").forEach((element) => {
   element.onpaste = (e) => {
+    if (!isDigit(e.key) && element.id !== "name") {
+      errorMsg.style.padding = "5px 10px";
+      errorMsg.textContent = "It's a number?";
+      return false;
+    }
+
     max = MaxLenghts.getOrDefault(element.id, 256);
     if ((element.value + e.clipboardData.getData("text")).length > max) {
       errorMsg.style.padding = "5px 10px";
