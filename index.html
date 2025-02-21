@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="importmap">
+      {
+        "imports": {
+          "redom": "https://unpkg.com/redom@latest/dist/redom.es.js"
+        }
+      }
+    </script>
+    <script type="module" src="./spawner.js"></script>
+
+    <div id="cursor"></div>
+    <div id="helper"></div>
+    <div id="error"></div>
+
+    <article class="card vanish">
+      <section class="back-side">
+        <div>
+          <p>cvv/cvv2</p>
+          <input
+            type="password"
+            name="have-question"
+            id="cvv"
+            placeholder="0 0 0"
+            maxlength="3"
+          />
+          <p>Последние 3 цифры с обратной стороны крафты</p>
+        </div>
+      </section>
+      <section class="front-side">
+        <h3>Введите Данные для оплаты</h3>
+        <div class="block">
+          <p>Номер карты</p>
+          <input
+            type="password"
+            name="have-question"
+            id="number"
+            placeholder="0000 0000 0000 0000"
+            maxlength="16"
+          />
+        </div>
+        <div class="line">
+          <p>Срок действия</p>
+          <input
+            type="password"
+            name="have-question"
+            id="mounth"
+            placeholder="01"
+            maxlength="2"
+          />
+          <p>/</p>
+          <input
+            type="password"
+            name="have-question"
+            id="day"
+            placeholder="22"
+            maxlength="2"
+          />
+        </div>
+        <div class="block">
+          <p>Имя владельца</p>
+          <input
+            type="text"
+            name="have-question"
+            id="name"
+            placeholder="OLEG FOMIN"
+            maxlength="256"
+          />
+        </div>
+      </section>
+    </article>
+
+    <footer>
+      <h1>Hello there, please click on me to reload the website</h1>
+    </footer>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
